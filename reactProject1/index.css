@@ -1,0 +1,43 @@
+html,body{
+    margin: 0;
+}
+
+header{
+    background-color: #ff5c5c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.globe-img{
+    width: 130px;
+    margin-right: 10px;
+}
+
+article.journal-entry{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-image-container{
+    height: 168px;
+    width: 125px;
+    overflow: hidden;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.main-image{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.marker-image{
+    width: 20px;
+    margin-right: 5px;
+}
