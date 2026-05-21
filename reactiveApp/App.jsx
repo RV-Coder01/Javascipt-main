@@ -56,7 +56,7 @@ function App() {
                 <button  onClick={increment}>+</button>
             </div>
             </> */}
-            {/* <Form /> */}
+            <Form />
         </>
     );
 }
