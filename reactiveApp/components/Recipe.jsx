@@ -3,7 +3,7 @@ export default function Recipe(props) {
         props.length > 3 && <section>
             <h3>Ready for a recipe?</h3>
             <button onClick={props.recipeShownFun}>Get a recipe</button>
-            <div>
+            <div ref={props.ref}>
                 {props.recipeShown &&
                     <p>To make classic Veg Manchow Soup, start by tossing boiled noodles in cornstarch and
                         deep-frying them until golden and crispy to use as your crunchy topping. Next, heat

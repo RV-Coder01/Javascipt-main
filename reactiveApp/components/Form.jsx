@@ -27,7 +27,7 @@ export function Form() {
 
     React.useEffect(()=>{
         if (ingredients.length !== 0 && recipeSection.current !== null) {
-            recipeSection.current.scrollIntoView({ behavior: "smooth" })
+            recipeSection.current.scrollIntoView()
         }
     },[ingredients])
 
@@ -49,9 +49,10 @@ export function Form() {
                 />
                 <button type="submit" id="bttn">+Add ingredients</button>
                 {ingredients.length ?
-                    <IngredientList ref={recipeSection} ingredients={ingredients} />
+                    <IngredientList ingredients={ingredients} />
                     : <h3>Please add your ingredients inside the input box</h3>}
                 <Recipe
+                    ref={recipeSection.current}
                     recipeShownFun={recipeShownFun}
                     recipeShown={recipeShown}
                     length={ingredients.length}
