@@ -5,6 +5,7 @@ import IngredientList from './IngredientList';
 export function Form() {
     const [ingredients, setIngredients] = React.useState([])
     const [recipeShown, setRecipeShown] = React.useState(false)
+    const recipeSection = React.useRef(null)
     // const [isShown, setIsShown]=React.useState(false)
     // function clickButton(){
     //     setIsShown(prevIsShown => !prevIsShown)
@@ -24,6 +25,12 @@ export function Form() {
         // event.currentTarget.reset()
     }
 
+    React.useEffect(()=>{
+        if (ingredients.length !== 0 && recipeSection.current !== null) {
+            recipeSection.current.scrollIntoView({ behavior: "smooth" })
+        }
+    },[ingredients])
+
     function recipeShownFun() {
         setRecipeShown(prevRecipeShown => !prevRecipeShown)
     }
@@ -42,7 +49,7 @@ export function Form() {
                 />
                 <button type="submit" id="bttn">+Add ingredients</button>
                 {ingredients.length ?
-                    <IngredientList ingredients={ingredients} />
+                    <IngredientList ref={recipeSection} ingredients={ingredients} />
                     : <h3>Please add your ingredients inside the input box</h3>}
                 <Recipe
                     recipeShownFun={recipeShownFun}
