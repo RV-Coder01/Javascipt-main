@@ -1,0 +1,33 @@
+export default[
+    {
+        id:1,
+        color:"red",
+        on:true
+    },
+    {
+        id:2,
+        color:"yellow",
+        on:false
+    },
+    {
+        id:3,
+        color:"black",
+        on:false
+    },
+    {
+        id:4,
+        color:"pink",
+        on:false
+    },
+    {
+        id:5,
+        color:"purple",
+        on:false
+    },
+    {
+        id:6,
+        color:"green",
+        on:false
+    }
+    
+]
